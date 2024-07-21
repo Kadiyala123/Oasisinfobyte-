@@ -1,0 +1,20 @@
+def calculate_bmi(weight,height):
+    bmi=weight/(height*2)
+    return bmi
+def  result(bmi):
+    if  bmi<18.5:
+        return "UnderWeight"
+    elif bmi >=18.5 and bmi<25:
+        return "NormalWeight"
+    elif bmi>=25 and bmi<30:
+        return "overWeight"
+    else:
+        return "Obesity"
+def  main():
+    weight=float(input("Enter your weight in kilogram:"))
+    height=float(input("Enter your height in meters:"))
+    bmi=calculate_bmi(weight,height)
+    category=result(bmi)
+    print(f"your BMI is{bmi:2f},which is {category}.")
+    if _name=="main_":
+        main()
